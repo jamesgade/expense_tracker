@@ -31,8 +31,8 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
-      useSafeArea: true,
-        isScrollControlled: true,   // for full screen bottom sheet
+        useSafeArea: true, // adds safearea, avoids overlapping with camera on the display
+        isScrollControlled: true, // for full screen bottom sheet
         context: context,
         builder: (BuildContext bctx) => NewExpense(onAddExpense: _addExpense));
   }
